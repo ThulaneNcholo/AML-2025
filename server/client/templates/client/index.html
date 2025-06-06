@@ -1,0 +1,93 @@
+{% load static %}
+
+<section id="scroll-anchor" class="page_heading">
+  <center>
+    <h1 class="fw-bold text-uppercase text-light mb-3">About The Conference</h1>
+    <div class="container">
+      <hr class="bg-light" />
+    </div>
+  </center>
+</section>
+
+<section class="container">
+  <div class="row mb-5">
+    <div class="col-12 col-md-6 mb-4">
+      <h1 class="headings">About The Conference</h1>
+      <p>
+        We are delighted to invite you to the premier Anti-Money Laundering
+        (AML) and Ethics Conference in South Africa, taking place at the
+        University of Pretoria. This two-day event, set to be the most
+        significant gathering of its kind in the region, is designed to equip
+        you with cutting-edge knowledge, practical strategies, and the tools
+        needed to combat financial crime effectively.
+      </p>
+      <p>
+        Whether you are a financial compliance manager, legal advisor, risk
+        manager, or industry professional, this conference offers an
+        unparalleled opportunity to enhance your expertise and connect with
+        peers who share your commitment to safeguarding the financial system.
+      </p>
+      <p>
+        In addition to the rich content and expert-led sessions, the conference
+        also presents exclusive exhibition opportunities. Showcase your
+        products, services, and innovations to a targeted audience of
+        decision-makers and leaders in the financial sector.
+      </p>
+      <p>
+        Don’t miss your chance to be part of this essential event and take your
+        place at the forefront of the fight against financial crime.
+      </p>
+    </div>
+    <div class="col-12 col-md-6 mb-4">
+      <center>
+        <h1 class="headings">Register Online</h1>
+        <a
+          href="{% url 'Register' %}"
+          hx-get="{% url 'Register' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <p class="mb-4">
+            Click here to <span class="fw-bold">Register</span>
+          </p>
+        </a>
+
+        <h1 class="headings mb-3">Download Our Brochure</h1>
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-6">
+            <a href="{{ proposal.brochure.url }}" download>
+              <button class="btn btn-dark primary_btn py-2">
+                Download Brochure
+              </button>
+            </a>
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+
+  <!-- ====== about images ====== -->
+  <div class="row">
+    <div class="col-12 col-md-4 mb-3">
+      <img
+        src="{% static '/images/about01.png' %}"
+        alt=""
+        class="about_images"
+      />
+    </div>
+    <div class="col-12 col-md-4 mb-3">
+      <img
+        src="{% static '/images/about02.png' %}"
+        alt=""
+        class="about_images"
+      />
+    </div>
+    <div class="col-12 col-md-4 mb-3">
+      <img
+        src="{% static '/images/about03.png' %}"
+        alt=""
+        class="about_images"
+      />
+    </div>
+  </div>
+</section>

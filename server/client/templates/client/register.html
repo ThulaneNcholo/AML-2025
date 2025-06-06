@@ -1,0 +1,60 @@
+{% load static %}
+
+<section id="scroll-anchor" class="page_heading">
+  <center>
+    <h1 class="fw-bold text-uppercase text-light mb-3">Register</h1>
+    <div class="container">
+      <hr class="bg-light" />
+    </div>
+  </center>
+</section>
+
+<section class="container">
+  <p>
+    We are delighted to invite you to the premier Anti-Money Laundering (AML)
+    and Ethics Conference in South Africa, taking place at the University of
+    Pretoria. This two-day event, set to be the most significant gathering of
+    its kind in the region, is designed to equip you with cutting-edge
+    knowledge, practical strategies, and the tools needed to combat financial
+    crime effectively.
+  </p>
+  <p class="mb-5">
+    Whether you are a financial compliance manager, legal advisor, risk manager,
+    or industry professional, this conference offers an unparalleled opportunity
+    to enhance your expertise and connect with peers who share your commitment
+    to safeguarding the financial system.
+  </p>
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4">
+      <div class="border border-dark register_form_card border_style h-100 p-3">
+        <h1 class="headings mb-4">Register Online</h1>
+        <div id="registerForm">
+          <!-- ======= Register Form Partial  ======= -->
+          {% include 'partials/register_form_partial.html' %}
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 mb-4">
+      <div class="border border-dark register_form_card border_style h-100 p-3">
+        <h1 class="headings mb-4">Register via a Booking Form</h1>
+        <p>
+          1 - Download the booking form by clicking the download button below
+        </p>
+        <p>2 - Fill in and sign the booking form</p>
+        <p>
+          3 - Scan the form and email it back to polite@ndebeleconsulting.co.za
+        </p>
+
+        <div class="row mt-3 d-flex justify-content-center">
+          <div class="col-12 col-md-6">
+            <a href="{{ proposal.brochure.url }}" download>
+              <button class="btn btn-dark primary_btn py-2 my-3">
+                Download Register Form
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,181 @@
+{% load static %}
+<style>
+  .navigation_container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("{% static 'images/aml_header.png' %}");
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+</style>
+
+<section class="navigation_container">
+  <div class="container">
+    <center>
+      <div class="row d-flex justify-content-center mb-5">
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="bg-white p-4 header_card">
+            <img
+              src="{% static '/images/aml_logo01.png' %}"
+              alt=""
+              class="header_logo mb-3"
+            />
+            <h1 class="header_title">AML 2025</h1>
+            <p class="header_sub_title">
+              ANTI-MONEY LAUNDERING & ETHICS CONFERENCE
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5" id="countdown">
+        <div class="row">
+          <div class="col-6 col-md mb-3">
+            <div class="bg-white p-3 rounded d-flex align-items-center gap-2">
+              <h2 class="time_counts mb-0" id="weeks"></h2>
+              <h2 class="mb-0 time_counts">: Weeks</h2>
+            </div>
+          </div>
+          <div class="col-6 col-md mb-3">
+            <div class="bg-white p-3 rounded d-flex align-items-center gap-2">
+              <h2 class="time_counts mb-0" id="days"></h2>
+              <h2 class="mb-0 time_counts">: Days</h2>
+            </div>
+          </div>
+          <div class="col-6 col-md mb-3">
+            <div class="bg-white p-3 rounded d-flex align-items-center gap-2">
+              <h2 class="time_counts mb-0" id="hours"></h2>
+              <h2 class="mb-0 time_counts">: Hours</h2>
+            </div>
+          </div>
+          <div class="col-6 col-md mb-3">
+            <div class="bg-white p-3 rounded d-flex align-items-center gap-2">
+              <h2 class="time_counts mb-0" id="minutes"></h2>
+              <h2 class="mb-0 time_counts">: Min</h2>
+            </div>
+          </div>
+          <div class="col-12 col-md mb-3">
+            <div class="bg-white p-3 rounded d-flex align-items-center gap-2">
+              <h2 class="time_counts mb-0" id="seconds"></h2>
+              <h2 class="mb-0 time_counts">: Seconds</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-light">
+        <span class="fw-bold">ANTI-MONEY LAUNDERING</span> A collaborative
+        effort in fighting financial crimes ETHICS CONFERENCE
+      </p>
+    </center>
+
+    <div class="row d-flex justify-content-center mt-5">
+      {% if user.is_authenticated %}
+      <div class="col-6 col-md-3 col-lg-2 mb-3">
+        <a
+          href="{% url 'dashboard' %}"
+          hx-get="{% url 'dashboard' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <button class="btn btn-light admin_btn py-2">Admin Dashboard</button>
+        </a>
+      </div>
+      {% endif %}
+      <div class="col-12 col-md-3 col-lg-2 mb-3">
+        <a
+          href="{% url 'index' %}"
+          hx-get="{% url 'index' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <button class="btn btn-dark primary_btn py-2">
+            About Conference
+          </button>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2 mb-3">
+        <a
+          href="{% url 'Register' %}"
+          hx-get="{% url 'Register' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <button class="btn btn-dark primary_btn py-2">Register</button>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2 mb-3">
+        <a
+          href="{% url 'Exhibit' %}"
+          hx-get="{% url 'Exhibit' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <button class="btn btn-dark primary_btn py-2">Exhibit</button>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2 mb-3">
+        <a
+          href="{% url 'Sponsor' %}"
+          hx-get="{% url 'Sponsor' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <button class="btn btn-dark primary_btn py-2">Sponsor</button>
+        </a>
+      </div>
+      <div class="col-12 col-md-3 col-lg-2 mb-3">
+        <a
+          href="{% url 'Sponsor-benefits' %}"
+          hx-get="{% url 'Sponsor-benefits' %}"
+          hx-target="#content"
+          hx-push-url="true"
+        >
+          <button class="btn btn-dark primary_btn py-2">
+            Sponsor Benefits
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Set your target date here
+    const targetDate = new Date("June 17, 2025 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "Countdown complete!";
+        clearInterval(timer);
+        return;
+      }
+
+      const secondsTotal = Math.floor(distance / 1000);
+
+      const weeks = Math.floor(secondsTotal / (7 * 24 * 60 * 60));
+      const days = Math.floor(
+        (secondsTotal % (7 * 24 * 60 * 60)) / (24 * 60 * 60)
+      );
+      const hours = Math.floor((secondsTotal % (24 * 60 * 60)) / (60 * 60));
+      const minutes = Math.floor((secondsTotal % (60 * 60)) / 60);
+      const seconds = secondsTotal % 60;
+
+      document.getElementById("weeks").textContent = weeks;
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }
+
+    // Update every second
+    const timer = setInterval(updateCountdown, 1000);
+
+    // Initial run
+    updateCountdown();
+  });
+</script>

@@ -1,0 +1,166 @@
+<section id="scroll-anchor" class="page_heading">
+  <center>
+    <h1 class="fw-bold text-uppercase text-light mb-3">Sponsor</h1>
+    <div class="container">
+      <hr class="bg-light" />
+    </div>
+  </center>
+</section>
+
+<section class="container">
+  <div class="row">
+    <div class="col-12 col-md-4 col-lg-3 mb-4">
+      <div class="sponsor_card h-100 border border-dark border_style py-5 px-3">
+        <center>
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold mb-5"
+          >
+            Bronze Package
+          </button>
+
+          <p class="package_p mb-5">
+            Essential sponsorship with effective visibility and key engagement
+            opportunities.
+          </p>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Branding visibility</li>
+            <li class="list-group-item">Access to networking events</li>
+            <li class="list-group-item">Exhibitor space</li>
+            <li class="list-group-item">Acknowledgment in program</li>
+          </ul>
+
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold my-4"
+          >
+            <h4 class="mb-0">R50 000</h4>
+          </button>
+        </center>
+      </div>
+    </div>
+    <!-- end main col  -->
+    <div class="col-12 col-md-4 col-lg-3 mb-4">
+      <div class="sponsor_card h-100 border border-dark border_style py-5 px-3">
+        <center>
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold mb-5"
+          >
+            Silver Package
+          </button>
+
+          <p class="package_p mb-5">
+            Valuable sponsorship with significant visibility and key engagement
+            opportunities.
+          </p>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Featured branding exposure</li>
+            <li class="list-group-item">Workshop participation</li>
+            <li class="list-group-item">Shared exhibitor space</li>
+            <li class="list-group-item">Networking event access</li>
+            <li class="list-group-item">
+              Quarter-page event program ad 3 Delegate Seats
+            </li>
+          </ul>
+
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold my-4"
+          >
+            <h4 class="mb-0">R100 000</h4>
+          </button>
+        </center>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-3 mb-4">
+      <div class="sponsor_card h-100 border border-dark border_style py-5 px-3">
+        <center>
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold mb-5"
+          >
+            Gold Package
+          </button>
+
+          <p class="package_p mb-5">
+            High-value sponsorship offering extensive visibility and valuable
+            engagement opportunities.
+          </p>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Prominent branding exposure</li>
+            <li class="list-group-item">Panel discussion participation</li>
+            <li class="list-group-item">Exhibitor booth access</li>
+            <li class="list-group-item">Networking session inclusion</li>
+            <li class="list-group-item">
+              Half-page event program advert 5 Delegate Seats
+            </li>
+          </ul>
+
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold my-4"
+          >
+            <h4 class="mb-0">R150 000</h4>
+          </button>
+        </center>
+      </div>
+    </div>
+    <!-- end main col  -->
+    <div class="col-12 col-md-4 col-lg-3 mb-4">
+      <div class="sponsor_card h-100 border border-dark border_style py-5 px-3">
+        <center>
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold mb-5"
+          >
+            Platinum Package
+          </button>
+
+          <p class="package_p mb-5">
+            Exclusive top-tier sponsorship with maximum visibility and premium
+            engagement opportunities.
+          </p>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Prime branding placement</li>
+            <li class="list-group-item">Keynote speaking opportunity</li>
+            <li class="list-group-item">Dedicated exhibitor space</li>
+            <li class="list-group-item">VIP networking access</li>
+            <li class="list-group-item">
+              Full-page event program advert 10 Delegate Seats
+            </li>
+          </ul>
+
+          <button
+            class="btn btn-dark sponsor_title_card border-0 rounded-pill fw-bold my-4"
+          >
+            <h4 class="mb-0">R200 000</h4>
+          </button>
+        </center>
+      </div>
+    </div>
+    <!-- end main col  -->
+  </div>
+
+  <div class="row mt-4 d-flex justify-content-center">
+    <div class="col-12 mb-3 col-md-6 col-lg-4">
+      <a
+        href="{% url 'Register' %}"
+        hx-get="{% url 'Register' %}"
+        hx-target="#content"
+        hx-push-url="true"
+      >
+        <button class="btn btn-dark primary_btn py-3">Register Now</button>
+      </a>
+    </div>
+    <div class="col-12 mb-3 col-md-6 col-lg-4">
+      <a
+        href="{% url 'Sponsor-benefits' %}"
+        hx-get="{% url 'Sponsor-benefits' %}"
+        hx-target="#content"
+        hx-push-url="true"
+      >
+        <button class="btn btn-dark secondary_btns py-3">
+          Benefits for Sponsors
+        </button>
+      </a>
+    </div>
+  </div>
+</section>

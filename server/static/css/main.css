@@ -1,0 +1,163 @@
+:root {
+  --primary-color: #d03808;
+  --secondary-color: #f05a1a;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(22, 22, 22);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section_spacing {
+  margin-bottom: 100px;
+}
+
+/* Navigation Partial style start  */
+/* .navigation_container {
+  background-color: #011174;
+  padding-top: 50px;
+  padding-bottom: 50px;
+} */
+
+.header_card {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.header_title {
+  font-weight: 900;
+  color: #ee904d;
+}
+
+.header_sub_title {
+  color: #ee904d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header_logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.page_heading {
+  background-color: #011174;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+.nav_logo {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.primary_btn {
+  background-color: var(--primary-color);
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-weight: 600;
+  border-color: var(--primary-color);
+}
+
+.secondary_btns {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-weight: 600;
+  background-color: #011174;
+}
+
+.admin_btn {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-weight: 600;
+}
+
+/* About Page Css Start  */
+.headings {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.about_images {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Register Page style  */
+.register_form_card {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.success_icon {
+  font-size: 50px;
+}
+
+/* Exhibit Page  */
+.exhibit_card {
+  background-color: #555555;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.exhibit_titles {
+  color: #ee904d;
+  font-weight: 700;
+}
+
+.exhibit_text {
+  color: #ee904d;
+}
+
+/* sponsor page pricing  */
+.sponsor_card {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.sponsor_title_card {
+  background-color: #ee904d;
+  font-weight: 700;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.package_p {
+  font-weight: 600;
+}
+
+.sponsor_icon {
+  font-size: 50px;
+  color: #c7a140;
+}
+
+.border_style {
+  border-color: #ee904d !important;
+}
+
+/* Admin Dashboard  */
+.table_titles {
+  font-weight: 600;
+}
+
+/* Timer  */
+.time_counts {
+  font-weight: 900;
+  color: #ee904d;
+}

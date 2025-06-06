@@ -1,0 +1,159 @@
+{% load static %}
+<section id="scroll-anchor" class="page_heading">
+  <center>
+    <h1 class="fw-bold text-uppercase text-light mb-3">Exhibit</h1>
+    <div class="container">
+      <hr class="bg-light" />
+    </div>
+  </center>
+</section>
+
+<section class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4">
+      <div class="exhibit_card h-100 p-3">
+        <h4 class="exhibit_titles mb-3">Delegate Pass – R8 990 Two Days</h4>
+        <p class="exhibit_text">
+          Attending the 2025 AML & Ethics Southern Africa Conference with a
+          delegate pass for R8,990 grants you two days of unparalleled insights,
+          networking, and industry expertise in the fight against financial
+          crime.
+        </p>
+      </div>
+    </div>
+    <!-- end main col  -->
+    <div class="col-12 col-md-6 mb-4">
+      <div class="exhibit_card h-100 p-3">
+        <h4 class="exhibit_titles mb-3">Exhibition Pod – R15,000</h4>
+        <p class="exhibit_text">
+          Ideal for small-scale exhibitors, showcasing a specific product or
+          service. Includes
+        </p>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">One branded exhibition pod</p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Complimentary refreshments for one representative
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Company logo on the conference website
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">One exhibitor pass</p>
+        </div>
+      </div>
+    </div>
+    <!-- end main col  -->
+    <div class="col-12 col-md-6 mb-4">
+      <div class="exhibit_card h-100 p-3">
+        <h4 class="exhibit_titles mb-3">3x3 Exhibition Stand – R20,999</h4>
+        <p class="exhibit_text">
+          Designed for medium-sized displays, the 3x3 stand is ideal for
+          companies that want to make a strong visual impact. Includes:
+        </p>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            3x3m exhibition space with customizable branding
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">Two exhibitor passes</p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Company logo on the conference website and in the event program
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Complimentary refreshments for two representatives
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Inclusion in the exhibitor directory handed to all attendees
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end main col  -->
+    <div class="col-12 col-md-6 mb-4">
+      <div class="exhibit_card h-100 p-3">
+        <h4 class="exhibit_titles mb-3">6x3 Exhibition Stand – R28,000</h4>
+        <p class="exhibit_text">
+          Perfect for larger displays or multiple product demonstrations, the
+          6x3 premium option ensures your brand stands out at the event.
+          Includes:
+        </p>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            6x3m exhibition space with customizable branding
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">Four exhibitor passes</p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Company logo on the conference website, event program, and main
+            stage backdrop
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Complimentary refreshments for four representatives
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Inclusion in the exhibitor directory handed to all attendees
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Priority booth placement for maximum visibility
+          </p>
+        </div>
+        <div class="d-flex gap-2 mb-2">
+          <i class="bi bi-arrow-right-circle-fill exhibit_text"></i>
+          <p class="exhibit_text mb-0">
+            Access to networking events with VIP attendees
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end main col  -->
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-md-6">
+      <a
+        href="{% url 'Register' %}"
+        hx-get="{% url 'Register' %}"
+        hx-target="#content"
+        hx-push-url="true"
+      >
+        <button class="btn btn-dark primary_btn py-3 my-3">Register Now</button>
+      </a>
+    </div>
+  </div>
+</section>

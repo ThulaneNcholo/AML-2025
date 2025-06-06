@@ -1,0 +1,288 @@
+{% if form_status == 'show_form' %}
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+
+<form
+  id="FormId"
+  hx-post="{% url 'submit-form' %}"
+  hx-target="#registerForm"
+  hx-swap="innerHTML"
+>
+  {% csrf_token %}
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Delegate: R8 990.00 (Two Day Pass)"
+      name="plans"
+      required
+      id="amlPlans1"
+    />
+    <label class="form-check-label" for="amlPlans1">
+      Delegate: R8 990.00 (Two Day Pass)
+    </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Exhibition: R15 000.00 - R28 000.00"
+      name="plans"
+      required
+      id="amlPlans2"
+    />
+    <label class="form-check-label" for="amlPlans2">
+      Exhibition: R15 000.00 - R28 000.00
+    </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Online Guest: R3 000.00"
+      name="plans"
+      required
+      id="amlPlans3"
+    />
+    <label class="form-check-label" for="amlPlans3">
+      Online Guest: R3 000.00
+    </label>
+  </div>
+  <div class="form-check mb-5">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Sponsorship: Please Contact Us"
+      name="plans"
+      required
+      id="amlPlans4"
+    />
+    <label class="form-check-label" for="amlPlans4">
+      Sponsorship: Please Contact Us
+    </label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      name="FullName"
+      required
+      placeholder="Name & Surname"
+    />
+    <label for="floatingInput">Name & Surname</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="number"
+      class="form-control"
+      id="floatingInput"
+      name="contact"
+      required
+      placeholder="Contact Details"
+    />
+    <label for="floatingInput">Contact Details</label>
+  </div>
+  <div class="form-floating mb-5">
+    <input
+      type="email"
+      class="form-control"
+      id="floatingInput"
+      required
+      name="email"
+      placeholder="name@example.com"
+    />
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      name="company"
+      required
+      placeholder="Organization/Firm/Company"
+    />
+    <label for="floatingInput">Organization/Firm/Company </label>
+  </div>
+  <div class="form-floating mb-5">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      name="position"
+      required
+      placeholder="Company Position"
+    />
+    <label for="floatingInput">Company Position </label>
+  </div>
+  <label class="mb-3" for="floatingInput"
+    >What are your dietary requirements?
+    <span class="text-danger">*</span>
+  </label>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="None"
+      name="dietary"
+      required
+      id="userdietary01"
+    />
+    <label class="form-check-label" for="userdietary01"> None </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Vegetarian"
+      name="dietary"
+      required
+      id="userdietary01"
+    />
+    <label class="form-check-label" for="userdietary01"> Vegetarian </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Halaal"
+      name="dietary"
+      required
+      id="userdietary01"
+    />
+    <label class="form-check-label" for="userdietary01"> Halaal </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Kosher"
+      name="dietary"
+      required
+      id="userdietary01"
+    />
+    <label class="form-check-label" for="userdietary01"> Kosher </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="radio"
+      value="Lactose Intolerant"
+      name="dietary"
+      required
+      id="userdietary01"
+    />
+    <label class="form-check-label" for="userdietary01">
+      Lactose Intolerant
+    </label>
+  </div>
+  <div class="mb-3">
+    <div class="form-check mb-3">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="dietary"
+        id="dietOther"
+        required
+        value="Other"
+      />
+      <label class="form-check-label" for="dietOther"> Other </label>
+    </div>
+
+    <input
+      type="text"
+      name="other_diet"
+      id="otherDietInput"
+      class="form-control mt-2"
+      placeholder="Please specify your diet"
+      aria-describedby="otherDietHelp"
+    />
+    <div id="otherDietHelp" class="form-text">
+      Enter your specific diet if it's not listed above.
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-dark primary_btn py-2 my-3"
+    onclick="LoadingSpinner()"
+  >
+    Submit Register
+  </button>
+</form>
+
+<!-- The loading spinner is OUTSIDE the target -->
+<center>
+  <div
+    id="loading_spinner"
+    class="spinner-border text-danger"
+    role="status"
+    style="display: none"
+  >
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</center>
+
+{% elif form_status == 'success' %}
+<div>
+  <center>
+    <i class="bi bi-check-circle-fill mb-3 success_icon text-success mt-5"></i>
+    <h5 class="mb-3 fw-bold">Successfully Submitted</h5>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-6">
+        <form
+          hx-post="{% url 'register-another' %}"
+          hx-target="#registerForm"
+          hx-swap="innerHTML"
+        >
+          {% csrf_token %}
+          <button type="submit" class="btn btn-dark primary_btn">
+            Register Another
+          </button>
+        </form>
+      </div>
+    </div>
+  </center>
+</div>
+{% elif form_status == 'error' %}
+<div>
+  <center>
+    <i
+      class="bi bi-exclamation-circle-fill mb-3 success_icon text-danger mt-5"
+    ></i>
+    <h5 class="mb-3 fw-bold">Submission Failed</h5>
+    <p>
+      We encountered an error while sending your registration email. Please
+      click the button below to try again.
+    </p>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-6">
+        <form
+          hx-post="{% url 'register-another' %}"
+          hx-target="#registerForm"
+          hx-swap="innerHTML"
+        >
+          {% csrf_token %}
+          <button type="submit" class="btn btn-dark primary_btn">
+            Resubmit
+          </button>
+        </form>
+      </div>
+    </div>
+  </center>
+</div>
+{% endif %}
+
+<script>
+  function LoadingSpinner() {
+    document.getElementById("FormId").style.display = "none";
+    document.getElementById("loading_spinner").style.display = "block";
+  }
+</script>
