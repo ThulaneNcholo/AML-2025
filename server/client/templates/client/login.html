@@ -76,54 +76,56 @@
       </center>
     </section>
 
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-md-6 col-lg-4">
-        <section class="my-3">
-          {% for message in messages %}
-          <div class="alert alert-primary" role="alert">{{message}}</div>
-          {% endfor %}
-        </section>
-        <form method="POST" autocomplete="off">
-          {% csrf_token %}
-          <div class="form-floating mb-3">
-            <input
-              type="text"
-              class="form-control input_style"
-              id="username"
-              name="username"
-              placeholder="Username"
-            />
-            <label for="username">Username</label>
-          </div>
-          <div class="form-floating mb-2">
-            <input
-              type="password"
-              class="form-control input_style"
-              id="myInput"
-              name="password"
-              placeholder="Password"
-            />
-            <label for="floatingInput">Password</label>
-          </div>
-          <div class="d-flex justify-content-end">
-            <p
-              class="mb-0 form_label_style cursor_pointer"
-              onclick="togglePassword(event)"
-            >
-              show-password
-            </p>
-          </div>
+    <section class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <section class="my-3">
+            {% for message in messages %}
+            <div class="alert alert-primary" role="alert">{{message}}</div>
+            {% endfor %}
+          </section>
+          <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control input_style"
+                id="username"
+                name="username"
+                placeholder="Username"
+              />
+              <label for="username">Username</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input
+                type="password"
+                class="form-control input_style"
+                id="myInput"
+                name="password"
+                placeholder="Password"
+              />
+              <label for="floatingInput">Password</label>
+            </div>
+            <div class="d-flex justify-content-end">
+              <p
+                class="mb-0 form_label_style cursor_pointer"
+                onclick="togglePassword(event)"
+              >
+                show-password
+              </p>
+            </div>
 
-          <button
-            value="Login"
-            type="submit"
-            class="btn btn-dark border-0 primary_btn mt-3 mb-4 py-3"
-          >
-            Login
-          </button>
-        </form>
+            <button
+              value="Login"
+              type="submit"
+              class="btn btn-dark border-0 primary_btn mt-3 mb-4 py-3"
+            >
+              Login
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
